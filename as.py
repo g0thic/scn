@@ -27,7 +27,7 @@ def run():
             ex1 = e
         try:
             
-            sum  = mathSummation(n1,n2)
+            sum = mathSummation(n1,n2)
             print("Using math equations:= Sum from ",n1," to ",n2,"is:",sum)
         except Exception as e:
             time.sleep(0.01)
@@ -45,7 +45,7 @@ def ValidateInput(chars):
     try:
         number_check = int(chars)
         return True,number_check
-    except:
+    except BaseException as e:
         return False,0
 
 def checkInput(n1:int,n2:int):
@@ -126,7 +126,7 @@ def computerSummation(n1:int,n2:int):
             raise BaseException()
         for i in range(n1,n2+1):
             sum+=i
-    except:
+    except BaseException as e:
         raise Exception("Summation error")
     return sum
 
@@ -138,8 +138,8 @@ def mathSummation(n1:int,n2:int):
     try:
         
         n =(n2 - n1)+1
-        sum  = int((n/2)*(n1+n2))
-    except:
+        sum = int((n/2)*(n1+n2))
+    except BaseException as e:
         raise Exception("Math error")
     return sum
 
