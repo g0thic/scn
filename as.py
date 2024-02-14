@@ -146,7 +146,6 @@ def mathSummation(n1:int,n2:int):
 
 
 if __name__ == "__main__":
-    #global n1,n2
     n1=0
     n2=0
     print("Sum of consecutive number")
